@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz App</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./resources/favicon.png">
+    <!-- Font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+     <script>
+      // ------------Main container-------------
+      var mainContainer = document.createElement('div');
+      mainContainer.setAttribute('class', 'container');
+      document.body.append(mainContainer);
+
+      // -------------Header---------------------
+
+      var indexHeader = document.createElement('div');
+      indexHeader.setAttribute('class', 'index-header');
+      indexHeader.innerHTML = "<h1>Quick Quiz</h1>"
+      mainContainer.appendChild(indexHeader);
+
+      // ------------ Play Button ------------------
+
+      var playButton = document.createElement('a');
+      playButton.setAttribute('href', './pages/game.html');
+      mainContainer.appendChild(playButton);
+
+      var btn1 = document.createElement('button');
+      btn1.setAttribute('id', 'play');
+      btn1.innerText = "Play"
+      var i1 = document.createElement('i');
+      i1.setAttribute('class','fa ml-2 fa-play');
+      i1.setAttribute('aria-hidden', 'true');
+      btn1.appendChild(i1);
+      playButton.appendChild(btn1);
+
+      // -------------- High Scores Button -------------
+      
+      var highScoreButton = document.createElement('a');
+      highScoreButton.setAttribute('href', './pages/highscores.html');
+      mainContainer.appendChild(highScoreButton);
+
+      var btn2 = document.createElement('button');
+      btn2.setAttribute('id', 'highScores');
+      btn2.innerText = "High Scores"
+      var i2 = document.createElement('i');
+      i2.setAttribute('class','fa ml-2 fa-trophy');
+      i2.setAttribute('aria-hidden', 'true');
+      btn2.appendChild(i2);
+      highScoreButton.appendChild(btn2);
+
+
+
+
+     </script>
+    
+</body>
+</html>

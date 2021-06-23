@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scrores Page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../resources/favicon.png">
+    <!-- Font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/highscores.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+
+    <script>
+        
+        // ---------high scores container-------------
+
+        var highScoresContainer = document.createElement('div');
+        highScoresContainer.setAttribute('class', 'container');
+        document.body.append(highScoresContainer);
+
+        var innerDiv = document.createElement('div');
+        innerDiv.setAttribute('id', 'highScores');
+        innerDiv.setAttribute('class', 'highScores1 highScores2');
+        highScoresContainer.appendChild(innerDiv);
+
+        // Tropy - image
+
+        var tropyImg = document.createElement('img');
+        tropyImg.setAttribute('src', 'https://www.flaticon.com/svg/static/icons/svg/2641/2641497.svg');
+        tropyImg.setAttribute('alt', 'High_Score_trophy_image');
+        innerDiv.appendChild(tropyImg);
+
+        // header
+
+        var headHighScore = document.createElement('h1');
+        headHighScore.setAttribute('id', 'finalScore');
+        headHighScore.innerText = "High Scores";
+        innerDiv.appendChild(headHighScore);
+
+        // ul high scores
+
+        var ulHighScore = document.createElement('ul');
+        ulHighScore.setAttribute('id', 'allHighScores');
+        innerDiv.appendChild(ulHighScore);
+
+        // Go home Button
+
+      var goHomeButton = document.createElement('a');
+      goHomeButton.setAttribute('href', '../index.html');
+      innerDiv.appendChild(goHomeButton);
+      
+      var btnGoHome = document.createElement('button');
+     
+      btnGoHome.setAttribute('id', 'goHome');
+      btnGoHome.setAttribute('class', 'btn');
+      
+      btnGoHome.innerText = "Go Home"
+      var i5 = document.createElement('i');
+      i5.setAttribute('class','fa ml-2 fa-home');
+      i5.setAttribute('aria-hidden', 'true');
+      btnGoHome.appendChild(i5);
+      goHomeButton.appendChild(btnGoHome);
+
+
+    </script>
+
+
+
+    <!-- External Script -->
+    <script src="../JS/highscroes.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    background: #45badd;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../resources/robot.gif');
+    background-size: contain;
+    background-position: center left;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+  }
+
+  .index-header h1{
+        color: white;
+        font-size: 3rem;
+  }
+
+  button{
+    cursor: pointer;
+    outline: none;
+    width: 300px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: white;
+    background: #ff3482;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.2);
+    }
+  
+    button:hover{
+      filter: brightness(95%);
+    }
+  
+    button:active{
+      transform: scale(0.98);
+    }
+  
+    button:disabled{
+      cursor: default;
+      filter: brightness(30%);
+    }
+
+  @media screen and (max-width: 1000px){
+
+
+    .container{
+      background-size: cover;
+      background-position: center center;
+    }
+    .index-header h1{
+        margin-top: 40%;
+  }
+    button{
+      box-shadow: 5px 5px 30px 20px rgba(0,0,0,0.5);
+    }
+
+
+  }

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Game Page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../resources/favicon.png">
+    <!-- Font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/game.css">
+</head>
+<body>
+    <script>
+        // -------------- Game Container -----------------
+
+        var gameContainer = document.createElement('div');
+        gameContainer.setAttribute('class', 'container');
+        document.body.append(gameContainer);
+
+        // --------------- Quiz Section ------------------
+
+        var quizDiv = document.createElement('div');
+        quizDiv.setAttribute('id', 'quiz');
+        gameContainer.appendChild(quizDiv);
+
+        // -------------- Head Section  --------------------
+
+        var headDiv = document.createElement('div')
+        headDiv.setAttribute('id', 'head-section');
+        quizDiv.appendChild(headDiv)
+
+        // head - div  item 1
+
+        var headDivItem1 = document.createElement('div');
+        headDivItem1.setAttribute('id', 'head-section-item');
+        headDiv.appendChild(headDivItem1);
+
+
+        var quesP = document.createElement('p');
+        quesP.setAttribute('id', 'progressText');
+        quesP.setAttribute('class', 'head-prefix');
+        quesP.innerText = "Question"
+        headDivItem1.appendChild(quesP);
+
+        // progress bar
+
+        var progressDiv = document.createElement('div');
+        progressDiv.setAttribute('id','progress');
+        headDivItem1.appendChild(progressDiv);
+
+        var innerProgressDiv = document.createElement('div');
+        innerProgressDiv.setAttribute('id','progressStatus');
+        progressDiv.appendChild(innerProgressDiv);
+
+        // head - div  item 2
+
+        var headDivItem2 = document.createElement('div');
+        headDivItem2.setAttribute('id', 'head-section-item');
+        headDiv.appendChild(headDivItem2);
+
+         // Score 
+
+        var scoreP = document.createElement('p');
+        scoreP.setAttribute('class', 'head-prefix');
+        scoreP.innerText = "Score"
+        headDivItem2.appendChild(scoreP);
+
+        // Score Value
+
+        var scoreValueH1 = document.createElement('h1');
+        scoreValueH1.setAttribute('id', 'score');
+        scoreValueH1.setAttribute('class', 'head-section-text');
+        scoreValueH1.innerText = "0";
+        headDivItem2.appendChild(scoreValueH1);
+
+        // -------------- Main Quiz Section----------------
+
+        // Question 
+
+        var questionH1 = document.createElement('h1');
+        questionH1.setAttribute('id', 'question');
+        quizDiv.appendChild(questionH1);
+
+        // -----------------Options------------------------
+
+        // --------Choice 1---------
+        
+        var choice1 = document.createElement('div');
+        choice1.setAttribute('class','choice-container');
+        quizDiv.appendChild(choice1);
+
+        var p1Choice1 = document.createElement('p');
+        p1Choice1.setAttribute('class', 'choice-prefix');
+        p1Choice1.innerText = "A";
+        choice1.appendChild(p1Choice1);
+
+        var p2Choice1 = document.createElement('p');
+        p2Choice1.setAttribute('class', 'choice-text');
+        p2Choice1.setAttribute('data-number', '1');
+        
+        choice1.appendChild(p2Choice1);
+
+        // --------Choice 2---------
+        
+        var choice2 = document.createElement('div');
+        choice2.setAttribute('class','choice-container');
+        quizDiv.appendChild(choice2);
+
+        var p1Choice2 = document.createElement('p');
+        p1Choice2.setAttribute('class', 'choice-prefix');
+        p1Choice2.innerText = "B";
+        choice2.appendChild(p1Choice2);
+
+        var p2Choice2 = document.createElement('p');
+        p2Choice2.setAttribute('class', 'choice-text');
+        p2Choice2.setAttribute('data-number', '2');
+        
+        choice2.appendChild(p2Choice2);
+
+        // --------Choice 3---------
+        
+        var choice3 = document.createElement('div');
+        choice3.setAttribute('class','choice-container');
+        quizDiv.appendChild(choice3);
+
+        var p1Choice3 = document.createElement('p');
+        p1Choice3.setAttribute('class', 'choice-prefix');
+        p1Choice3.innerText = "C";
+        choice3.appendChild(p1Choice3);
+
+        var p2Choice3 = document.createElement('p');
+        p2Choice3.setAttribute('class', 'choice-text');
+        p2Choice3.setAttribute('data-number', '3');
+        
+        choice3.appendChild(p2Choice3);
+
+        // --------Choice 4---------
+        
+        var choice4 = document.createElement('div');
+        choice4.setAttribute('class','choice-container');
+        quizDiv.appendChild(choice4);
+
+        var p1Choice4 = document.createElement('p');
+        p1Choice4.setAttribute('class', 'choice-prefix');
+        p1Choice4.innerText = "D";
+        choice4.appendChild(p1Choice4);
+
+        var p2Choice4 = document.createElement('p');
+        p2Choice4.setAttribute('class', 'choice-text');
+        p2Choice4.setAttribute('data-number', '4');
+        
+        choice4.appendChild(p2Choice4);
+
+        
+
+
+       
+
+    </script>
+
+
+
+
+     <!-- External Script -->
+     <script src="../JS/game.js"></script>
+</body>
+</html>

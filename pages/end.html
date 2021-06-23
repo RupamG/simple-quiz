@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>End Page</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="../resources/favicon.png">
+        <!-- Font-awesome  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <!-- Bootsrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../styles/end.css">
+    </head>
+<body>
+
+    <script>
+
+        // -----------End Container-----------------
+
+        var endContainer = document.createElement('div');
+        endContainer.setAttribute('class','container');
+        document.body.append(endContainer);
+        
+        // -----------Inner Div --------------------
+
+        var innerDiv = document.createElement('div');
+        innerDiv.setAttribute('id', 'end');
+        innerDiv.setAttribute('class', 'end1 end2');
+        endContainer.appendChild(innerDiv);
+
+        // ---------------final Score---------------
+
+        var final  = document.createElement('h1');
+        final.setAttribute('id', 'finalScore');
+        final.innerText = "0";
+        innerDiv.appendChild(final);
+
+        // ---------------Form Container--------------
+
+        var formContainer = document.createElement('form');
+        formContainer.setAttribute('class', 'form-container');
+        innerDiv.appendChild(formContainer);
+
+        // ------------ input field--------------
+
+        var inp = document.createElement('input');
+        inp.setAttribute('type', 'text');
+        inp.setAttribute('name', 'name');
+        inp.setAttribute('id', 'username');
+        inp.setAttribute('placeholder', 'Enter Your Name');
+        formContainer.appendChild(inp);
+
+        // Save button
+        var btnEnd = document.createElement('button');
+        btnEnd.setAttribute('type', 'submit');
+        btnEnd.setAttribute('id', 'saveScoreBtn');
+        btnEnd.setAttribute('class', 'btn');
+        btnEnd.setAttribute('onclick', 'saveHighScore(event)');
+        btnEnd.setAttribute('disabled', 'true');
+        btnEnd.innerText = "Save";
+        formContainer.appendChild(btnEnd);
+
+        // ----------------Play Again Button --------------------
+
+
+      var playAgainButton = document.createElement('a');
+      playAgainButton.setAttribute('href', './game.html');
+      innerDiv.appendChild(playAgainButton);
+      
+      var btnPlayAgain = document.createElement('button');
+     
+      btnPlayAgain.setAttribute('id', 'playAgain');
+      btnPlayAgain.setAttribute('class', 'btn');
+      
+      btnPlayAgain.innerText = "Play Again"
+      var i3 = document.createElement('i');
+      i3.setAttribute('class','fa ml-2 fa-play');
+      i3.setAttribute('aria-hidden', 'true');
+      btnPlayAgain.appendChild(i3);
+      playAgainButton.appendChild(btnPlayAgain);
+      
+       // ---------------- Go Home Button -----------------------
+       
+       var goHomeButton = document.createElement('a');
+      goHomeButton.setAttribute('href', '../index.html');
+      innerDiv.appendChild(goHomeButton);
+      
+      var btnGoHome = document.createElement('button');
+     
+      btnGoHome.setAttribute('id', 'goHome');
+      btnGoHome.setAttribute('class', 'btn');
+      
+      btnGoHome.innerText = "Go Home"
+      var i4 = document.createElement('i');
+      i4.setAttribute('class','fa ml-2 fa-home');
+      i4.setAttribute('aria-hidden', 'true');
+      btnGoHome.appendChild(i4);
+      goHomeButton.appendChild(btnGoHome);
+
+
+
+    </script>
+
+
+
+    <script src="../JS/end.js"></script>
+    
+</body>
+</html>

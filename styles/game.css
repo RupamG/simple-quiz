@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 59%;
+    font-family: Montserrat, sans-serif;
+}
+body {
+    color: #fff;
+    background-color: #45badd;
+}
+
+h1 {
+    font-size: 3.3rem;
+    color: #fff;
+    margin-bottom: 5rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background:  #ff3482;
+    font-size: 2.4rem;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0,0, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+}
+
+
+#head-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+
+#progress {
+    width: 20rem;
+    height: 3rem;
+    border: 3px solid  #ff3482;
+    margin-top: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progressStatus {
+    height: 100%;
+    background: rgb(11,223,36);
+    width: 0%;
+}
+
+@media screen and (max-width: 997px) {
+    .choice-container {
+        min-width: 20rem;
+    }
+}
